@@ -1,7 +1,9 @@
 package giang.hust.qlsv;
 
+import giang.hust.qlsv.controller.LoginController;
+import giang.hust.qlsv.view.LoginView;
+
 import java.awt.*;
-import java.util.EventListener;
 
 public class App {
     public static void main(String[] args) {

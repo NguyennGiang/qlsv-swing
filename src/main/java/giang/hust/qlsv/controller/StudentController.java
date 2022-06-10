@@ -1,11 +1,14 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.controller;
+
+import giang.hust.qlsv.dao.StudentDao;
+import giang.hust.qlsv.view.StudentView;
+import giang.hust.qlsv.entity.Student;
 
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.List;
 
 public class StudentController {
     private StudentDao studentDao;

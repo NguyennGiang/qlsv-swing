@@ -1,4 +1,6 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.view;
+
+import giang.hust.qlsv.entity.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

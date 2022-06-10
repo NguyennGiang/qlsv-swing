@@ -1,10 +1,8 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.entity;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import giang.hust.qlsv.entity.Student;
+
 import java.util.ArrayList;
-import java.util.List;
 
 //@XmlRootElement(name = "students")
 //@XmlAccessorType(XmlAccessType.FIELD)

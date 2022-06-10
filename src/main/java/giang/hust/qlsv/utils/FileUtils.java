@@ -1,4 +1,4 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.utils;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

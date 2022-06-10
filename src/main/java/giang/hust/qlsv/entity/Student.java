@@ -1,4 +1,4 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.entity;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

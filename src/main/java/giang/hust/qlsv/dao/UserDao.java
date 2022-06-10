@@ -1,4 +1,6 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.dao;
+
+import giang.hust.qlsv.entity.User;
 
 public class UserDao {
     public boolean checkUser(User user){

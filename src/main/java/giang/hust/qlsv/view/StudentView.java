@@ -1,4 +1,6 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.view;
+
+import giang.hust.qlsv.entity.Student;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;

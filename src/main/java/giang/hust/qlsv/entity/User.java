@@ -1,4 +1,4 @@
-package giang.hust.qlsv;
+package giang.hust.qlsv.entity;
 
 public class User {
     private String userName;
