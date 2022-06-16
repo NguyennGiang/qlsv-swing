@@ -1,35 +1,28 @@
 package giang.hust.qlsv.dao;
 
-import giang.hust.qlsv.utils.FileUtils;
 import giang.hust.qlsv.entity.Student;
-import giang.hust.qlsv.entity.StudentXML;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
 public class StudentDao {
-    private static final String STUDENT_FILE_NAME = "student.xml";
+    private static final String STUDENT_FILE_NAME = "student.json";
     private ArrayList<Student> listStudent;
 
     public StudentDao(){
         this.listStudent = readListStudents();
     }
 
+    // ghi ra file
     public void writeListStudents(ArrayList<Student> students){
-        StudentXML studentXML = new StudentXML();
-        studentXML.setStudents(students);
-        FileUtils.writeXMLtoFile(STUDENT_FILE_NAME, studentXML);
+
     }
 
+    // đọc file
     public ArrayList<Student> readListStudents(){
         ArrayList<Student> list = new ArrayList<>();
-        StudentXML studentXML = (StudentXML) FileUtils.readXMLFile(
-                STUDENT_FILE_NAME, StudentXML.class
-        );
-        if (studentXML != null){
-            list = studentXML.getStudents();
-        }
+
         return list;
     }
 

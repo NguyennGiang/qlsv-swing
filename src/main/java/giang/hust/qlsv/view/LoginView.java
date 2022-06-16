@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class LoginView extends JFrame implements ActionListener {
-    private static final long serialVersionUID = 1;
+//    private static final long serialVersionUID = 1;
     private JLabel userNameLabel;
     private JLabel passwordLabel;
     private JPasswordField passwordField;
@@ -57,7 +57,7 @@ public class LoginView extends JFrame implements ActionListener {
         this.pack();
         this.setTitle("Login");
         this.setSize(400, 300);
-        this.setResizable(false);
+        this.setResizable(true);
     }
 
     public void showMessage(String message){

@@ -32,7 +32,7 @@ public class LoginController {
                 studentView = new StudentView();
                 StudentController studentController = new StudentController(studentView);
                 studentController.showStudentView();
-                loginView.setVisible(true);
+                loginView.setVisible(false);
             }
             else {
                 loginView.showMessage("Username hoặc password không đúng");
