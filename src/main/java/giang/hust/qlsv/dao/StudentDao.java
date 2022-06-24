@@ -26,11 +26,21 @@ public class StudentDao {
         return list;
     }
 
-    public void add(Student student) {
-        int id = (listStudent.size() > 0) ? (listStudent.size() + 1) : 1;
-        student.setId(id);
-        listStudent.add(student);
+    public boolean add(Student student) {
+        boolean isFound = false;
+        int size = listStudent.size();
+        for (int i = 0; i < size; i++) {
+            if (listStudent.get(i).getMSSV().equals(student.getMSSV())) {
+                isFound = true;
+                break;
+            }
+        }
+        if (isFound == false) {
+            listStudent.add(student);
+            return true;
+        }
         writeListStudents(listStudent);
+        return false;
     }
 
     public void edit(Student student) {

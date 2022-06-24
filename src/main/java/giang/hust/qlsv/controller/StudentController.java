@@ -37,10 +37,14 @@ public class StudentController {
         public void actionPerformed(ActionEvent e) {
             Student student = studentView.getStudentInfo();
             if (student != null) {
-                studentDao.add(student);
+                if(studentDao.add(student)){
+                    studentView.showMessage("Them thanh cong");
+                }
+                else {
+                    studentView.showMessage("Mã số sinh viên đã tồn tại");
+                }
                 studentView.showStudent(student);
                 studentView.showListStudents(studentDao.getListStudent());
-                studentView.showMessage("Thêm thành công!");
             }
         }
     }
