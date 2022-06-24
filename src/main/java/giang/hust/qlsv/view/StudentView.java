@@ -274,7 +274,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
             if (idField.getText() != null && !"".equals(idField.getText())) {
                 student.setId(Integer.parseInt(idField.getText()));
             }
-            student.setMSSV(mssvField.getText());
+            student.setMSSV(mssvField.getText().trim());
             student.setName(nameField.getText().trim());
             student.setAge(Byte.parseByte(ageField.getText().trim()));
             student.setAddress(addressTA.getText().trim());
@@ -327,7 +327,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
             Float cpa = Float.parseFloat(cpaField.getText().trim());
             if (cpa < 0 || cpa > 4) {
                 cpaField.requestFocus();
-                showMessage("GPA không hợp lệ, gpa nên trong khoảng 0 đến 10.");
+                showMessage("GPA không hợp lệ, gpa nên trong khoảng 0 đến 4.");
                 return false;
             }
         } catch (Exception e) {

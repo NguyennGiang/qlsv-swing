@@ -38,6 +38,7 @@ public class StudentDao {
         for (int i = 0; i < size; i++) {
             if (listStudent.get(i).getId() == student.getId()) {
                 listStudent.get(i).setName(student.getName());
+                listStudent.get(i).setMSSV(student.getMSSV());
                 listStudent.get(i).setAge(student.getAge());
                 listStudent.get(i).setAddress(student.getAddress());
                 listStudent.get(i).setCpa(student.getCpa());
