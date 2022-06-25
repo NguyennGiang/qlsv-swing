@@ -1,13 +1,14 @@
 package giang.hust.qlsv.dao;
 
 import giang.hust.qlsv.entity.Student;
+import giang.hust.qlsv.utils.FileUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
 public class StudentDao {
-    private static final String STUDENT_FILE_NAME = "student.json";
+    private static final String STUDENT_FILE_NAME = "E:\\Hust Assignment\\New\\OOP\\qlsv-swing\\student.xlsx";
     private ArrayList<Student> listStudent;
 
     public StudentDao(){
@@ -16,7 +17,8 @@ public class StudentDao {
 
     // ghi ra file
     public void writeListStudents(ArrayList<Student> students){
-
+        FileUtils fileUtils = new FileUtils();
+        fileUtils.writeFile(STUDENT_FILE_NAME, this.getListStudent());
     }
 
     // đọc file
