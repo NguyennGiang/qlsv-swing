@@ -3,6 +3,7 @@ package giang.hust.qlsv.view;
 import giang.hust.qlsv.entity.User;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -53,11 +54,13 @@ public class LoginView extends JFrame implements ActionListener {
         layout.putConstraint(SpringLayout.NORTH, loginBtn, 130, SpringLayout.NORTH, panel);
 
         // add panel tới JFrame;
+        panel.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.add(panel);
         this.pack();
         this.setTitle("Login");
         this.setSize(400, 300);
-        this.setResizable(true);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
     }
 
     public void showMessage(String message){
@@ -75,5 +78,10 @@ public class LoginView extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+    }
+
+    public void clear() {
+        userNameField.setText("");
+        passwordField.setText("");
     }
 }

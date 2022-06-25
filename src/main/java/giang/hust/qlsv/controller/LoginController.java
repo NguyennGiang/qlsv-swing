@@ -36,6 +36,7 @@ public class LoginController {
             }
             else {
                 loginView.showMessage("Username hoặc password không đúng");
+                loginView.clear();
             }
         }
     }

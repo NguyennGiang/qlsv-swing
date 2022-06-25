@@ -22,6 +22,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
     private JScrollPane jScrollPaneStudentTable;
     private JScrollPane jScrollPaneAddress;
     private JTable studentTable;
+    private JButton exportFileButton;
 
     private JLabel idLabel;
     private JLabel nameLabel;
@@ -29,6 +30,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
     private JLabel addressLabel;
     private JLabel cpaLabel;
     private JLabel mssvLabel;
+//    private JLabel exportFileLabel;
 
     private JTextField idField;
     private JTextField nameField;
@@ -36,6 +38,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
     private JTextField ageField;
     private JTextArea addressTA;
     private JTextField cpaField;
+//    private JTextField exportFileField;
 
     // định nghĩa các cột của bảng student
     private String [] columnNames = new String [] {
@@ -56,6 +59,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         clearBtn = new JButton("Clear");
         sortStudentGPABtn = new JButton("Sort By CPA");
         sortStudentNameBtn = new JButton("Sort By Name");
+        exportFileButton = new JButton("Export File");
         // khởi tạo bảng student
         jScrollPaneStudentTable = new JScrollPane();
         studentTable = new JTable();
@@ -101,6 +105,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         panel.add(clearBtn);
         panel.add(sortStudentGPABtn);
         panel.add(sortStudentNameBtn);
+        panel.add(exportFileButton);
 
         panel.add(idLabel);
         panel.add(nameLabel);
@@ -160,11 +165,17 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         layout.putConstraint(SpringLayout.NORTH, sortStudentGPABtn, 330, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, sortStudentNameBtn, 115, SpringLayout.WEST, sortStudentGPABtn);
         layout.putConstraint(SpringLayout.NORTH, sortStudentNameBtn, 330, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, exportFileButton, 330, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, exportFileButton, 125, SpringLayout.WEST, sortStudentNameBtn);
 
+
+//        panel.setBackground(Color.BLUE);
         this.add(panel);
         this.pack();
         this.setTitle("Student Information");
         this.setSize(800, 420);
+        this.setLocationRelativeTo(null);
+
         // disable Edit and Delete buttons
         editStudentBtn.setEnabled(false);
         deleteStudentBtn.setEnabled(false);
@@ -367,6 +378,8 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
     public void addSortStudentNameListener(ActionListener listener) {
         sortStudentNameBtn.addActionListener(listener);
     }
+
+    public void addExportFile(ActionListener listener){exportFileButton.addActionListener(listener);}
 
     public void addListStudentSelectionListener(ListSelectionListener listener) {
         studentTable.getSelectionModel().addListSelectionListener(listener);

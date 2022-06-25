@@ -25,12 +25,21 @@ public class StudentController {
         view.addSortStudentGPAListener(new SortStudentCPAListener());
         view.addSortStudentNameListener(new SortStudentNameListener());
         view.addListStudentSelectionListener(new ListStudentSelectionListener());
+        view.addExportFile(new ExportFile());
     }
 
     public void showStudentView() {
         ArrayList<Student> studentList = studentDao.getListStudent();
         studentView.setVisible(true);
         studentView.showListStudents(studentList);
+    }
+
+    class ExportFile implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            studentDao.writeListStudents(studentDao.getListStudent());
+        }
     }
 
     class AddStudentListener implements ActionListener {
